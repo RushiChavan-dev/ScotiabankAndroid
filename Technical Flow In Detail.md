@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This documentation provides a step-by-step guide on how Android application works with Dagger Hilt for dependency injection, Jetpack Compose for UI, Retrofit for network communication, and OkHttp as the HTTP client.
+This documentation provides a step-by-step guide on how my Android application works with Dagger Hilt for dependency injection, Jetpack Compose for UI, Retrofit for network communication, and OkHttp as the HTTP client.
 
 ## Initialization
 
@@ -82,10 +82,11 @@ Upon receiving responses from Retrofit network requests, ViewModels update their
 
 To maintain a clean and scalable codebase, separate UI logic (Jetpack Compose), business logic (ViewModels), and data handling (Retrofit, Repositories). This approach enhances maintainability and facilitates easier debugging and testing.
 
+<!-- 
 ### Error Handling in Network Requests
 
 Implement robust error handling strategies within Retrofit (`onFailure` callbacks) to gracefully manage network failures and unexpected responses. Provide meaningful error messages to users to enhance usability and user experience.
-
+-->
 ### Testing Strategies for Components
 
 Utilize unit testing frameworks (e.g., JUnit, Okhttp3) to test ViewModels, Retrofit service interfaces, and Jetpack Compose UI components individually. Mock dependencies (e.g., Retrofit responses) to simulate different scenarios and ensure application stability and reliability.

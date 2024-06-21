@@ -74,7 +74,7 @@ git clone https://github.com/your_username/your_repository.git
    api_key=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
    base_url=https://api.github.com/users/
    ```
-   Replace `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` with your actual GitHub API key (personal access token). Or you can use this one for 30 days.
+   **Recommend to replace** `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` **with your actual GitHub API key (personal access token).**
 3. Save the `local.properties` file.
 
 **Build and Run:**
