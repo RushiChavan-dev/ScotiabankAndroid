@@ -93,12 +93,14 @@ git clone https://github.com/your_username/your_repository.git
 
 ### Screenshots
 
-![alt text](photo_2024-06-20_20-42-10-1.jpg)
-![alt text](photo_2024-06-20_20-42-07-1.jpg)
-![alt text](photo_2024-06-20_20-42-05-1.jpg)  
-![alt text](photo_2024-06-20_20-42-00-1.jpg)
-![alt text](photo_2024-06-20_20-41-45-1.jpg)
-![alt text](photo_2024-06-20_20-41-45-1-1.jpg)
+
+<p align="left">
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/5381877b-bcb7-4598-ad60-243a37bd0cca" width="180"/>
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/5ae07479-5717-42e0-845e-c955ddd345ce" width="180"/>
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/7933cda7-14dd-42c0-b5f9-30bb14160c0b" width="180"/>
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/b8791f21-4a1a-4eee-9c20-f9d305f71034" width="180"/>
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/dd40e66a-f0d7-4c9d-abf2-74c49254eb37" width="180"/>
+</p>
 
 ## User Interface (UI) Design
 
@@ -112,7 +114,8 @@ The UI design adheres to Google's Material Design guidelines:
 ### Wireframes/UI Flow Diagrams
 
 Include wireframes or UI flow diagrams if available.
-![alt text](<Group 3-1.png>)
+
+![Group 3](https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/0069858e-30bb-45ce-9e84-57ff9b7f173d)
 
 ## Data Model
 
@@ -124,8 +127,7 @@ Include wireframes or UI flow diagrams if available.
 ### Data Flow Diagrams
 
 Illustrate data flows between components, focusing on ViewModel interactions with the data layer:
-
-![alt text](<Group 1-1.png>)
+![Group 1](https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/5796bf43-60a5-4583-8a48-932f1ec9402b)
 
 1. **User Interaction:** Initiates user actions, such as clicking buttons or entering search queries.
 2. **Fragment:** Android UI component that interacts with the user and forwards events to the ViewModel.
