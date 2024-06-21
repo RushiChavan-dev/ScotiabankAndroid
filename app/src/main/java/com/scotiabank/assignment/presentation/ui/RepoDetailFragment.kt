@@ -13,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * The fragment responsible for displaying the Composable view
- * of the selected repo details
+ * of the selected repository details.
  */
 
 @AndroidEntryPoint
@@ -24,9 +24,11 @@ class RepoDetailFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let { bundle ->
+            // Retrieve the total forks from the bundle
             bundle.getInt("forksTotal").let {
                 forksTotal = it
             }
+            // Retrieve the repository object from the bundle
             repo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 bundle.getParcelable("repo", Repo::class.java)
             } else {
@@ -40,6 +42,7 @@ class RepoDetailFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Create a ComposeView and set the content to the RepoDetailView composable
         return ComposeView(requireContext()).apply {
             setContent {
                 RepoDetailView(repo = repo, forksTotal = forksTotal)
