@@ -94,12 +94,12 @@ git clone https://github.com/your_username/your_repository.git
 ### Screenshots
 
 
-<p align="center">
-  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/5381877b-bcb7-4598-ad60-243a37bd0cca" width="200"/>
-  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/5ae07479-5717-42e0-845e-c955ddd345ce" width="200"/>
-  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/7933cda7-14dd-42c0-b5f9-30bb14160c0b" width="200"/>
-  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/b8791f21-4a1a-4eee-9c20-f9d305f71034" width="200"/>
-  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/dd40e66a-f0d7-4c9d-abf2-74c49254eb37" width="200"/>
+<p align="left">
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/5381877b-bcb7-4598-ad60-243a37bd0cca" width="180"/>
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/5ae07479-5717-42e0-845e-c955ddd345ce" width="180"/>
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/7933cda7-14dd-42c0-b5f9-30bb14160c0b" width="180"/>
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/b8791f21-4a1a-4eee-9c20-f9d305f71034" width="180"/>
+  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/dd40e66a-f0d7-4c9d-abf2-74c49254eb37" width="180"/>
 </p>
 
 ## User Interface (UI) Design
