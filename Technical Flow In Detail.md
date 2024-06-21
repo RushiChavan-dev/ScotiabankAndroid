@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This documentation provides a step-by-step guide on how Android application works with Dagger Hilt for dependency injection, Jetpack Compose for UI, Retrofit for network communication, and OkHttp as the HTTP client.
+This documentation provides a step-by-step guide on how my Android application works with Dagger Hilt for dependency injection, Jetpack Compose for UI, Retrofit for network communication, and OkHttp as the HTTP client.
 
 ## Initialization
 
