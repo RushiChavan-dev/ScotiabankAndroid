@@ -9,6 +9,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -28,75 +31,81 @@ import com.scotiabank.assignment.util.parseISODate
  * @param repo The Repo object containing the details to be displayed.
  * @param forksTotal The total number of forks across all repositories of the user.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RepoDetailView(repo: Repo?, forksTotal: Int) {
-    Column(
+    Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(20.dp)
+            .padding(16.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
-        repo?.let {
-            // Display the name of the repository
-            Text(
-                text = "Repo name: ${repo.name}",
-                style = MaterialTheme.typography.headlineMedium.copy(fontSize = 24.sp),
-                color = MaterialTheme.colorScheme.primary
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-
-            // Display the description of the repository if available
-            repo.description?.let {
+        Column(
+            modifier = Modifier.padding(16.dp)
+        ) {
+            repo?.let {
+                // Display the name of the repository
                 Text(
-                    text = "Description: ${repo.description}",
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 20.sp),
-                    modifier = Modifier.padding(bottom = 10.dp)
+                    text = "Repo name: ${repo.name}",
+                    style = MaterialTheme.typography.headlineMedium.copy(fontSize = 24.sp),
+                    color = MaterialTheme.colorScheme.primary
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+
+                // Display the description of the repository if available
+                repo.description?.let {
+                    Text(
+                        text = "Description: ${repo.description}",
+                        style = MaterialTheme.typography.bodyLarge.copy(fontSize = 20.sp),
+                        modifier = Modifier.padding(bottom = 10.dp)
+                    )
+                }
+
+                // Display the number of stargazers
+                Text(
+                    text = "Number of stargazers: ${repo.stargazersCount}",
+                    style = MaterialTheme.typography.bodyMedium.copy(fontSize = 18.sp),
+                    color = MaterialTheme.colorScheme.secondary
+                )
+
+                // Display the last updated date after formatting it
+                val formattedDate = formatDate(parseISODate(repo.updatedAt))
+                Text(
+                    text = "Last updated: $formattedDate",
+                    style = MaterialTheme.typography.bodySmall.copy(fontSize = 16.sp),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+
+                // Display the fork count for the current repository
+                Text(
+                    text = "Fork count for ${repo.name}: ${repo.curRepoForks}",
+                    style = MaterialTheme.typography.bodySmall.copy(fontSize = 16.sp),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
 
-            // Display the number of stargazers
-            Text(
-                text = "Number of star gazers: ${repo.stargazersCount}",
-                style = MaterialTheme.typography.bodyMedium.copy(fontSize = 18.sp),
-                color = MaterialTheme.colorScheme.secondary
-            )
+            Spacer(modifier = Modifier.height(16.dp))
 
-            // Display the last updated date after formatting it
-            val formattedDate = formatDate(parseISODate(repo.updatedAt))
-            Text(
-                text = "Last updated: $formattedDate",
-                style = MaterialTheme.typography.bodySmall.copy(fontSize = 16.sp),
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-
-            // Display the fork count for the current repository
-            Text(
-                text = "Fork count for ${repo.name}: ${repo.curRepoForks}",
-                style = MaterialTheme.typography.bodySmall.copy(fontSize = 16.sp),
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Display the total fork count across all repositories
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = "Total forks across all Repo: $forksTotal",
-                color = if (forksTotal >= 5000) Color.Red else Color.Black,
-                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 20.sp)
-            )
-            // Display a star icon if the total fork count is high
-            if (forksTotal >= 5000) {
-                Icon(
-                    imageVector = Icons.Filled.Star,
-                    contentDescription = "High forks",
-                    tint = Color(0xFFB4A43E),
-                    modifier = Modifier
-                        .size(24.dp)
-                        .padding(start = 8.dp)
+            // Display the total fork count across all repositories
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Total forks across all Repos: $forksTotal",
+                    color = if (forksTotal >= 5000) Color.Red else Color.Black,
+                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 20.sp)
                 )
+                // Display a star icon if the total fork count is high
+                if (forksTotal >= 5000) {
+                    Icon(
+                        imageVector = Icons.Filled.Star,
+                        contentDescription = "High forks",
+                        tint = Color(0xFFB4A43E),
+                        modifier = Modifier
+                            .size(24.dp)
+                            .padding(start = 8.dp)
+                    )
+                }
             }
         }
     }
