@@ -19,6 +19,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.scotiabank.assignment.R
 import com.scotiabank.assignment.presentation.ui.RepoListViewModel
@@ -65,6 +66,11 @@ fun RepoListContent(viewModel: RepoListViewModel, navController: NavController) 
 
         // Conditionally display the repositories or the error message
         if (error.isNotEmpty()) {
+            if (error == stringResource(id = R.string.error_unknown_host) ||error == stringResource(id = R.string.error_network) || error == stringResource(id = R.string.error_bad_credentials) || error == stringResource(id = R.string.error_unknown) ){
+                isNewSearchResult = SearchStatus.NEW_INPUT
+                userDetailVisible = true
+                repoCardsVisible = true
+            }
             Text(text = error, color = MaterialTheme.colorScheme.error)
         } else {
             // Animated visibility for UserDetailCard
