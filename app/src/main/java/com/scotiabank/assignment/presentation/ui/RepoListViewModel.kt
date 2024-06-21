@@ -1,5 +1,6 @@
 package com.scotiabank.assignment.presentation.ui
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.JsonParseException
@@ -64,10 +65,10 @@ class RepoListViewModel @Inject constructor(
                 _repos.value = reposResult
             } catch (e: HttpException) {
                 // Handle specific HTTP exceptions (e.g., 404)
-                _error.value = if (e.code() == 404) {
-                    stringProvider.getString(R.string.error_user_not_found)
-                } else {
-                    stringProvider.getString(R.string.error_network)
+                _error.value = when (e.code()) {
+                    404 -> stringProvider.getString(R.string.error_user_not_found)
+                    401 -> stringProvider.getString(R.string.error_bad_credentials)
+                    else -> stringProvider.getString(R.string.error_network)
                 }
             } catch (e: UnknownHostException) {
                 // Handle unknown host exception
@@ -75,6 +76,8 @@ class RepoListViewModel @Inject constructor(
                 _repos.value = emptyList()
                 _error.value = stringProvider.getString(R.string.error_unknown_host)
             } catch (e: IOException) {
+
+                Log.d("TAG", "searchUser: $e")
                 // Handle IOException for network-related errors
                 _error.value = stringProvider.getString(R.string.error_network)
             } catch (e: JsonParseException) {

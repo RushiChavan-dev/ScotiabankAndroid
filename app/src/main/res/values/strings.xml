@@ -13,4 +13,6 @@
     <string name="error_invalid_response">Invalid response.</string>
     <string name="error_unknown">Unknown error occurred.</string>
     <string name="error_unknown_host">Unable to resolve host. Please check your internet connection and try again.</string>
+    <string name="error_bad_credentials">Bad credentials. Please check your credentials and try again.</string>
+
 </resources>
