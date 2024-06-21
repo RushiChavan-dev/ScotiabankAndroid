@@ -100,7 +100,6 @@ git clone https://github.com/your_username/your_repository.git
   <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/7933cda7-14dd-42c0-b5f9-30bb14160c0b" width="200"/>
   <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/b8791f21-4a1a-4eee-9c20-f9d305f71034" width="200"/>
   <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/dd40e66a-f0d7-4c9d-abf2-74c49254eb37" width="200"/>
-  <img src="https://github.com/RushiChavan-dev/ScotiabankAndroid/assets/50754786/19b8a2d3-9d00-40a4-973f-bdfb4a068c9d" width="200"/>
 </p>
 
 ## User Interface (UI) Design
