@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/repo_list_fragment">
+
+    <fragment
+        android:id="@+id/repo_list_fragment"
+        android:name="com.scotiabank.assignment.presentation.ui.RepoListFragment"
+        android:label="RepoListFragment">
+        <action
+            android:id="@+id/view_repo"
+            app:destination="@id/repo_detail_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/repo_detail_fragment"
+        android:name="com.scotiabank.assignment.presentation.ui.RepoDetailFragment"
+        android:label="RepoDetailFragment">
+    </fragment>
+</navigation>

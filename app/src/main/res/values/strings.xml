@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ScotiabankAndroid</string>
+
+    <string name="title_activity_main">ScotiaBank Assignment</string>
+
+
+    <string name="text_input_card_hint">Enter a github user id</string>
+    <string name="text_input_card_button">Search</string>
+    <string name="invalid_input_warning">Special characters or white spaces are not allowed</string>
+    <string name="search">Search</string>
+    <string name="error_user_not_found">User not found. Please check the username.</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_invalid_response">Invalid response.</string>
+    <string name="error_unknown">Unknown error occurred.</string>
+    <string name="error_unknown_host">Unable to resolve host. Please check your internet connection and try again.</string>
 </resources>

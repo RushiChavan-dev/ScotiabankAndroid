@@ -1,4 +1,4 @@
-package com.scotiabank.assignment.ui.theme
+package com.scotiabank.assignment.presentation.theme
 
 import android.app.Activity
 import android.os.Build

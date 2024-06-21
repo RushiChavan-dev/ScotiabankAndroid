@@ -1,4 +1,4 @@
-package com.scotiabank.assignment.ui.theme
+package com.scotiabank.assignment.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
